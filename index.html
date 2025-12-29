@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Awesome Public APIs - A comprehensive collection of 1000+ free public APIs curated by Kiran Babu">
+    <meta name="keywords" content="APIs, Public APIs, Free APIs, Developer Tools, REST API, Web Development">
+    <meta name="author" content="Kiran Babu">
+    <meta property="og:title" content="Awesome Public APIs by Kiran Babu">
+    <meta property="og:description" content="1000+ Free Public APIs for Developers">
+    <meta property="og:type" content="website">
+    <title>Awesome Public APIs | Curated by Kiran Babu</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066ff;
+            --secondary-color: #6366f1;
+            --accent-color: #8b5cf6;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #0066ff 0%, #6366f1 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-2);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 2rem;
+            background: rgba(26, 26, 26, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 6rem 2rem;
+            background: rgba(26, 26, 26, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .categories-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .category-tag {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .category-tag:hover {
+            background: var(--gradient-2);
+            transform: scale(1.05);
+        }
+
+        .category-emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Brand Section */
+        .brand-section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .brand-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .brand-image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 102, 255, 0.3);
+        }
+
+        .brand-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .brand-text p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-btn:hover {
+            background: var(--gradient-2);
+            transform: translateY(-5px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: var(--gradient-2);
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            background: var(--card-bg);
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .brand-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🚀 Awesome APIs</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://github.com/itskiranbabu/awesome-public-apis" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Awesome Public APIs</h1>
+            <p class="subtitle">Curated by Kiran Babu</p>
+            <p class="description">
+                Your ultimate resource for discovering and integrating 1000+ free public APIs. 
+                From AI & Machine Learning to Blockchain, Weather, and beyond - everything you need to build amazing products.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://github.com/itskiranbabu/awesome-public-apis" class="btn btn-primary" target="_blank">
+                    ⭐ Explore on GitHub
+                </a>
+                <a href="https://github.com/itskiranbabu/awesome-public-apis/blob/main/README.md" class="btn btn-secondary" target="_blank">
+                    📚 View Documentation
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span style="font-size: 2rem;">↓</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Public APIs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Code Examples</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Free & Open Source</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Why Choose This Collection?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-title">AI & ML Ready</h3>
+                <p class="feature-description">
+                    Access cutting-edge AI APIs including OpenAI, Claude, Gemini, Hugging Face, and more. Build intelligent applications with ease.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-title">Code Examples</h3>
+                <p class="feature-description">
+                    Every major API includes working code examples in JavaScript, Python, and cURL. Copy, paste, and start building immediately.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3 class="feature-title">Security First</h3>
+                <p class="feature-description">
+                    Best practices for API key management, rate limiting, error handling, and secure integration patterns included.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Quick Start Guides</h3>
+                <p class="feature-description">
+                    Get up and running in minutes with comprehensive quick start guides and real-world use case examples.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3 class="feature-title">Global Coverage</h3>
+                <p class="feature-description">
+                    APIs from around the world covering every domain - from weather and maps to finance and social media.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3 class="feature-title">Regularly Updated</h3>
+                <p class="feature-description">
+                    Community-driven updates ensure you always have access to the latest and most relevant APIs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="categories-container">
+            <h2 class="section-title">Explore 25+ Categories</h2>
+            <div class="categories-grid">
+                <div class="category-tag">
+                    <span class="category-emoji">🤖</span>
+                    AI & Machine Learning
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🔗</span>
+                    Blockchain & Crypto
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🐾</span>
+                    Animals
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🎨</span>
+                    Art & Design
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📚</span>
+                    Books & Literature
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">💼</span>
+                    Business & Finance
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📅</span>
+                    Calendar & Events
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">☁️</span>
+                    Cloud Storage
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">💱</span>
+                    Currency Exchange
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📊</span>
+                    Data & Analytics
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🛠️</span>
+                    Development Tools
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📧</span>
+                    Email & Communication
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🎮</span>
+                    Entertainment & Gaming
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🌍</span>
+                    Environment & Weather
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🍔</span>
+                    Food & Drink
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🏥</span>
+                    Health & Fitness
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📰</span>
+                    News & Media
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📸</span>
+                    Photography
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🗺️</span>
+                    Maps & Geocoding
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🎵</span>
+                    Music & Audio
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🔐</span>
+                    Security
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🛒</span>
+                    Shopping & E-commerce
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📱</span>
+                    Social Media
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🏃</span>
+                    Sports & Fitness
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">🚗</span>
+                    Transportation
+                </div>
+                <div class="category-tag">
+                    <span class="category-emoji">📹</span>
+                    Video & Streaming
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section class="brand-section" id="about">
+        <div class="brand-content">
+            <div class="brand-text">
+                <h2>Curated by Kiran Babu</h2>
+                <p>
+                    Hi! I'm Kiran Babu, a passionate developer and API enthusiast. I created this comprehensive collection 
+                    to help developers like you discover and integrate the best public APIs available.
+                </p>
+                <p>
+                    With years of experience in software development and a deep understanding of API ecosystems, 
+                    I've carefully curated over 1000 APIs across 25+ categories, complete with documentation, 
+                    code examples, and best practices.
+                </p>
+                <p>
+                    This project is open source and community-driven. Whether you're building your next startup, 
+                    working on a side project, or just learning to code - this resource is for you.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/itskiranbabu" class="social-btn" target="_blank" title="GitHub">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/itskiranbabu" class="social-btn" target="_blank" title="LinkedIn">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/itskiranbabu" class="social-btn" target="_blank" title="Twitter">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/40fc8a4a-e2d2-40d6-96c2-81c7a18cfaa9/2025-12-29T10-55-38-275Z-85334ee3-nano-banana-pro_1767005738101.jpg" alt="Awesome Public APIs" class="brand-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Build Something Amazing?</h2>
+        <p>Start exploring 1000+ free public APIs today!</p>
+        <div class="cta-buttons">
+            <a href="https://github.com/itskiranbabu/awesome-public-apis" class="btn btn-primary" target="_blank" style="background: white; color: #0066ff;">
+                ⭐ Star on GitHub
+            </a>
+            <a href="https://github.com/itskiranbabu/awesome-public-apis/blob/main/CONTRIBUTING.md" class="btn btn-secondary" target="_blank" style="border-color: white; color: white;">
+                🤝 Contribute
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/itskiranbabu/awesome-public-apis">GitHub</a>
+                <a href="https://github.com/itskiranbabu/awesome-public-apis/blob/main/README.md">Documentation</a>
+                <a href="https://github.com/itskiranbabu/awesome-public-apis/blob/main/CONTRIBUTING.md">Contributing</a>
+                <a href="https://github.com/itskiranbabu/awesome-public-apis/blob/main/LICENSE">License</a>
+                <a href="https://github.com/itskiranbabu">About Kiran</a>
+            </div>
+            <p style="color: var(--text-secondary); margin-top: 2rem;">
+                Made with ❤️ by <a href="https://github.com/itskiranbabu" style="color: var(--primary-color); text-decoration: none;">Kiran Babu</a>
+            </p>
+            <p style="color: var(--text-secondary); margin-top: 0.5rem;">
+                © 2025 Awesome Public APIs. Licensed under MIT.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 1s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .category-tag, .stat-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
