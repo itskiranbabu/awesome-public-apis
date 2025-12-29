@@ -2,9 +2,14 @@
 
 > A comprehensive, curated collection of **1000+ free public APIs** for developers. Enhanced with detailed documentation, code examples, and real-world use cases.
 
+## 🌐 [**Visit Live Website →**](https://itskiranbabu.github.io/awesome-public-apis/)
+
 [![GitHub stars](https://img.shields.io/github/stars/itskiranbabu/awesome-public-apis?style=social)](https://github.com/itskiranbabu/awesome-public-apis)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://itskiranbabu.github.io/awesome-public-apis/)
+
+---
 
 ## 📋 Table of Contents
 
@@ -605,6 +610,18 @@ Special thanks to:
 - [public-apis/public-apis](https://github.com/public-apis/public-apis) - Original inspiration
 - All API providers for making their services accessible
 - Contributors who help maintain this list
+
+---
+
+## 👨‍💻 About the Creator
+
+**Kiran Babu** - Passionate developer and API enthusiast
+
+- 🌐 Website: [itskiranbabu.github.io/awesome-public-apis](https://itskiranbabu.github.io/awesome-public-apis/)
+- 💼 LinkedIn: [linkedin.com/in/itskiranbabu](https://www.linkedin.com/in/itskiranbabu)
+- 🐦 Twitter: [@itscontentspark](https://x.com/itscontentspark)
+- 📸 Instagram: [@itskiranbabu](https://www.instagram.com/itskiranbabu/)
+- 💻 GitHub: [@itskiranbabu](https://github.com/itskiranbabu)
 
 ---
 
