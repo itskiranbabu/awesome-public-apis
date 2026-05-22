@@ -321,6 +321,7 @@ print(f"{track['name']} by {track['artists'][0]['name']}")
 | [AirVisual](https://www.iqair.com/air-pollution-data-api) | Air quality | `apiKey` | Yes | Unknown | Global |
 | [Carbon Interface](https://www.carboninterface.com/docs) | Carbon emissions | `apiKey` | Yes | Yes | Global |
 | [NASA](https://api.nasa.gov/) | Space and earth data | `apiKey` | Yes | Unknown | Global |
+| [TideTurtle](https://tideturtle.com/developers) | Tide times + charts for 1,414 coastal places, REST + MCP | No | Yes | Yes | Global |
 
 ### OpenWeatherMap Example
 ```javascript
