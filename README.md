@@ -361,6 +361,7 @@ fetch(url)
 | [Apple HealthKit](https://developer.apple.com/documentation/healthkit) | Health data | `OAuth` | Yes | Unknown | iOS health |
 | [Google Fit](https://developers.google.com/fit) | Fitness platform | `OAuth` | Yes | Unknown | Activity tracking |
 | [Withings](https://developer.withings.com/) | Health devices | `OAuth` | Yes | Unknown | Device data |
+| [Longevity World Cup](https://longevityworldcup.com/swagger) | Public athlete, biomarker, biological age calculator, and rank-preview data | No | Yes | Yes | Longevity competition data |
 
 ---
 
