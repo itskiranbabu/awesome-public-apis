@@ -461,6 +461,7 @@ for article in articles[:5]:
 | API | Description | Auth | HTTPS | CORS | Platform |
 |-----|-------------|------|-------|------|----------|
 | [Twitter/X](https://developer.twitter.com/en/docs) | Social network | `OAuth` | Yes | Unknown | Twitter |
+| [Xquik](https://docs.xquik.com/api-reference/overview) | X/Twitter data, monitors, webhooks, MCP | `apiKey` | Yes | Unknown | X/Twitter |
 | [Facebook Graph](https://developers.facebook.com/docs/graph-api) | Social platform | `OAuth` | Yes | Unknown | Facebook |
 | [Instagram](https://developers.facebook.com/docs/instagram-api) | Photo sharing | `OAuth` | Yes | Unknown | Instagram |
 | [LinkedIn](https://docs.microsoft.com/en-us/linkedin/) | Professional network | `OAuth` | Yes | Unknown | LinkedIn |
