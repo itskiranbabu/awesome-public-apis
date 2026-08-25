@@ -294,6 +294,7 @@ console.log(`1 USD = ${data.conversion_rates.EUR} EUR`);
 | [TMDB](https://developers.themoviedb.org/3) | Movie database | `apiKey` | Yes | Unknown | 700k+ movies |
 | [OMDb](http://www.omdbapi.com/) | Movie database | `apiKey` | Yes | Yes | Movie data |
 | [JokeAPI](https://jokeapi.dev/) | Programming jokes | No | Yes | Yes | 300+ jokes |
+| [GZW Data](https://gzw-data.vercel.app/docs/) | Gray Zone Warfare weapons, missions, loot, armor and game data | No | Yes | Yes | 85+ datasets |
 
 ### Spotify Example
 ```python
