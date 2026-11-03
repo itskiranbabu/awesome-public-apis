@@ -247,6 +247,7 @@ console.log(`1 USD = ${data.conversion_rates.EUR} EUR`);
 | [PostHog](https://posthog.com/docs/api) | Product analytics | `apiKey` | Yes | Yes | Open-source analytics |
 
 ---
+- [StatOrigin](https://statorigin.org) - Verified, sourced industry statistics for 32 industries with a public REST API (no auth required)
 
 ## 🛠️ Development Tools
 
