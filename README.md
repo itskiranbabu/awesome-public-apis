@@ -453,6 +453,7 @@ for article in articles[:5]:
 | [eBay](https://developer.ebay.com/docs) | Marketplace API | `OAuth` | Yes | Unknown | eBay |
 | [Etsy](https://www.etsy.com/developers/documentation) | Handmade marketplace | `OAuth` | Yes | Unknown | Etsy |
 | [Best Buy](https://bestbuyapis.github.io/api-documentation/) | Product catalog | `apiKey` | Yes | Unknown | Best Buy |
+| [Clickwise](<https://partners.clickwise.net/developers/>) | Affiliate programs, deals and tracked links, plus product search by text or GTIN. | `apiKey` | Yes | Unknown | Product search by text or GTIN |
 
 ---
 
