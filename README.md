@@ -245,6 +245,7 @@ console.log(`1 USD = ${data.conversion_rates.EUR} EUR`);
 | [Amplitude](https://www.docs.developers.amplitude.com/) | Product analytics | `apiKey` | Yes | Unknown | Event tracking |
 | [Segment](https://segment.com/docs/connections/sources/) | Customer data platform | `apiKey` | Yes | Unknown | Data integration |
 | [PostHog](https://posthog.com/docs/api) | Product analytics | `apiKey` | Yes | Yes | Open-source analytics |
+| [Datacircle](https://api.datacircle.dev/v1) | Find the best GTM APIs | `No` | Yes | Yes | Spec: api.datacircle.dev/v1/openapi.json |
 
 ---
 
