@@ -200,6 +200,7 @@ for book in books[:5]:
 | [Eventbrite](https://www.eventbrite.com/platform/api) | Event management | `OAuth` | Yes | Unknown | Event ticketing |
 | [Meetup](https://www.meetup.com/api/) | Group events | `OAuth` | Yes | Unknown | Social events |
 | [Ticketmaster](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/) | Event discovery | `apiKey` | Yes | Unknown | Event search |
+| [No Stairs Please](https://nostairsplease.com/mcp) | US live-music venues & booking directory (MCP) | No | Yes | Yes | MCP / JSON |
 
 ---
 
