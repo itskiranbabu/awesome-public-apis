@@ -498,6 +498,7 @@ for article in articles[:5]:
 | [NBA API](https://github.com/swar/nba_api) | Basketball stats | No | Yes | Unknown | NBA |
 | [NHL API](https://gitlab.com/dword4/nhlapi) | Hockey data | No | Yes | Unknown | NHL |
 | [Formula One](https://ergast.com/mrd/) | F1 racing data | No | Yes | Unknown | F1 |
+| [Tennis Scores API](https://apify.com/publicrecords/tennis-scores-api) | ATP and WTA match scores, results and rankings (Apify Actor, API only) | `apiKey` | Yes | Unknown | ATP/WTA |
 
 ---
 
